@@ -1,1 +1,50 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map - Aiden's Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap" defer></script>
+</head>
+<body class="map-page">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">index.html</a></li>
+        <li><a href="resume.html">resume.html</a></li>
+        <li><a href="page3.html">page3.html</a></li>
+        <li><a href="map.html">map.html</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Interactive Google Map</h1>
+
+    <p>This page uses the Google Maps API to display an interactive map. You can explore the map, view a marker, and switch between different map styles using the buttons below.</p>
+
+    <h2>Map Controls</h2>
+
+    <div class="map-controls">
+      <button id="roadmap-button" type="button">Roadmap</button>
+      <button id="satellite-button" type="button">Satellite</button>
+      <button id="terrain-button" type="button">Terrain</button>
+    </div>
+
+    <div id="map" aria-label="Interactive Google Map"></div>
+
+    <h2>About This Map</h2>
+
+    <p>The map is centered around the Illinois Institute of Technology in Chicago. The marker identifies the location, and clicking it displays additional information.</p>
+
+    <button id="questions-button" type="button">Questions?</button>
+  </main>
+
+  <footer>
+    <p>Created for ITMD 361</p>
+  </footer>
+</body>
+</html>
