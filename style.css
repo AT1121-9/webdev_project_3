@@ -25,7 +25,7 @@ header nav ul {
 
 header nav a {
   display: block;
-  padding: 15px 25px;
+  padding: 12px 15px;
   color: white;
   text-decoration: none;
 }
@@ -43,128 +43,214 @@ footer {
   margin-top: 2em;
 }
 
-/* ================================= */
-/* HOME PAGE - FLUID LAYOUT */
-/* ================================= */
-
-/* Style 1 */
-.home-page main {
+/* Shared main content - mobile first */
+.home-page main,
+.rowing-page main,
+.resume-page main,
+.map-page main {
   width: 90%;
-  max-width: 70em;
-  margin: 2em auto;
-  padding: 2em;
+  margin: 1em auto;
+  padding: 1em;
+  box-sizing: border-box;
   background-color: white;
 }
 
-/* Style 2 */
-.home-page h1 {
+/* Shared headings */
+.home-page h1,
+.rowing-page h1,
+.resume-page h1,
+.map-page h1 {
   color: #17324d;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
-/* Style 3 */
-.home-page img {
-  display: block;
-  width: 70%;
-  max-width: 35em;
-  height: auto;
-  margin: 2em auto;
-}
-
-/* Style 4 */
-.home-page h2 {
+.home-page h2,
+.resume-page h2,
+.map-page h2 {
   color: #315d80;
   border-bottom: 2px solid #315d80;
   padding-bottom: 0.3em;
 }
 
-/* Style 5 */
-.home-page audio {
-  display: block;
-  max-width: 100%;
-  margin: 1.5em auto;
-}
-
-/* ================================= */
-/* ROWING PAGE - FLUID LAYOUT */
-/* ================================= */
-
-/* Style 1 */
-.rowing-page main {
-  width: 90%;
-  max-width: 70em;
-  margin: 2em auto;
-  padding: 2em;
-  background-color: white;
-}
-
-/* Style 2 */
-.rowing-page h1 {
-  color: #17324d;
-  text-align: center;
-  font-size: 2.5em;
-}
-
-/* Style 3 */
 .rowing-page h2 {
   color: #315d80;
   border-left: 5px solid #315d80;
   padding-left: 0.5em;
 }
 
-/* Style 4 */
-.rowing-page img {
-  display: block;
-  width: 65%;
-  max-width: 35em;
-  height: auto;
-  margin: 1.5em auto;
-  border: 3px solid #17324d;
-}
-
-/* Style 5 */
-.rowing-page li {
-  margin-bottom: 0.5em;
-}
-
-/* ================================= */
-/* RESUME PAGE - FIXED-WIDTH LAYOUT */
-/* ================================= */
-
-/* Style 1 */
-.resume-page main {
-  width: 960px;
-  margin: 2em auto;
-  padding: 2em;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-/* Style 2 */
-.resume-page h1 {
-  color: #17324d;
-  text-align: center;
-  font-size: 2.5em;
-}
-
-/* Style 3 */
-.resume-page h2 {
-  color: #315d80;
-  border-bottom: 2px solid #315d80;
-  padding-bottom: 0.3em;
-}
-
-/* Style 4 */
 .resume-page h3 {
   color: #426b8b;
 }
 
-/* Style 5 */
+/* Images */
+.home-page img,
+.rowing-page img,
 .resume-page img {
-  width: 300px;
-  height: auto;
   display: block;
+  width: 100%;
+  max-width: 35em;
+  height: auto;
   margin: 1.5em auto;
   border: 3px solid #17324d;
+  box-sizing: border-box;
+}
+
+/* Home page */
+.home-page audio {
+  display: block;
+  max-width: 100%;
+  margin: 1.5em auto;
+}
+
+/* Rowing page */
+.rowing-page li {
+  margin-bottom: 0.5em;
+}
+
+/* Resume page */
+.resume-page main {
+  max-width: 70em;
+}
+
+.resume-page img {
+  max-width: 300px;
+}
+
+/* Map page */
+.map-page main {
+  max-width: 70em;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  margin: 1.5em auto;
+  border: 3px solid #17324d;
+  box-sizing: border-box;
+}
+
+.map-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 1em 0;
+}
+
+.map-controls button {
+  padding: 10px 15px;
+  background-color: #17324d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.map-controls button:hover {
+  background-color: #315d80;
+}
+
+/* Questions button */
+#questions-button {
+  display: block;
+  margin: 2em auto 1em;
+  padding: 12px 24px;
+  background-color: #17324d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#questions-button:hover {
+  background-color: #315d80;
+}
+
+/* ================================= */
+/* MEDIA QUERY 1 - TABLET */
+/* Minimum width: 600px */
+/* ================================= */
+
+@media screen and (min-width: 600px) {
+
+  /* Change 1: Increase page content padding */
+  .home-page main,
+  .rowing-page main,
+  .resume-page main,
+  .map-page main {
+    padding: 2em;
+  }
+
+  /* Change 2: Increase navigation link spacing */
+  header nav a {
+    padding: 15px 22px;
+  }
+
+  /* Change 3: Increase heading sizes */
+  .home-page h1,
+  .rowing-page h1,
+  .resume-page h1,
+  .map-page h1 {
+    font-size: 2.5em;
+  }
+
+  /* Change 4: Give homepage image more space */
+  .home-page img {
+    width: 70%;
+  }
+
+  /* Change 5: Adjust rowing page images */
+  .rowing-page img {
+    width: 65%;
+  }
+
+  /* Change 6: Increase map height */
+  #map {
+    height: 450px;
+  }
+}
+
+/* ================================= */
+/* MEDIA QUERY 2 - DESKTOP */
+/* Minimum width: 900px */
+/* ================================= */
+
+@media screen and (min-width: 900px) {
+
+  /* Change 1: Increase main content width */
+  .home-page main,
+  .rowing-page main,
+  .resume-page main,
+  .map-page main {
+    width: 85%;
+    max-width: 70em;
+    margin: 2em auto;
+  }
+
+  /* Change 2: Widen navigation spacing */
+  header nav a {
+    padding: 15px 25px;
+  }
+
+  /* Change 3: Increase map height */
+  #map {
+    height: 500px;
+  }
+
+  /* Change 4: Increase map button spacing */
+  .map-controls {
+    gap: 15px;
+  }
+
+  /* Change 5: Increase image width on rowing page */
+  .rowing-page img {
+    max-width: 35em;
+  }
+
+  /* Change 6: Increase Questions button size */
+  #questions-button {
+    padding: 14px 30px;
+  }
 }
