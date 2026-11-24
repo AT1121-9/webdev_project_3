@@ -1,0 +1,170 @@
+
+/* General styles shared by all pages */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e8edf2;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Shared navigation */
+header nav {
+  background-color: #17324d;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  background-color: #315d80;
+}
+
+/* Shared footer */
+footer {
+  background-color: #17324d;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* ================================= */
+/* HOME PAGE - FLUID LAYOUT */
+/* ================================= */
+
+/* Style 1 */
+.home-page main {
+  width: 90%;
+  max-width: 70em;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: white;
+}
+
+/* Style 2 */
+.home-page h1 {
+  color: #17324d;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Style 3 */
+.home-page img {
+  display: block;
+  width: 70%;
+  max-width: 35em;
+  height: auto;
+  margin: 2em auto;
+}
+
+/* Style 4 */
+.home-page h2 {
+  color: #315d80;
+  border-bottom: 2px solid #315d80;
+  padding-bottom: 0.3em;
+}
+
+/* Style 5 */
+.home-page audio {
+  display: block;
+  max-width: 100%;
+  margin: 1.5em auto;
+}
+
+/* ================================= */
+/* ROWING PAGE - FLUID LAYOUT */
+/* ================================= */
+
+/* Style 1 */
+.rowing-page main {
+  width: 90%;
+  max-width: 70em;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: white;
+}
+
+/* Style 2 */
+.rowing-page h1 {
+  color: #17324d;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Style 3 */
+.rowing-page h2 {
+  color: #315d80;
+  border-left: 5px solid #315d80;
+  padding-left: 0.5em;
+}
+
+/* Style 4 */
+.rowing-page img {
+  display: block;
+  width: 65%;
+  max-width: 35em;
+  height: auto;
+  margin: 1.5em auto;
+  border: 3px solid #17324d;
+}
+
+/* Style 5 */
+.rowing-page li {
+  margin-bottom: 0.5em;
+}
+
+/* ================================= */
+/* RESUME PAGE - FIXED-WIDTH LAYOUT */
+/* ================================= */
+
+/* Style 1 */
+.resume-page main {
+  width: 960px;
+  margin: 2em auto;
+  padding: 2em;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Style 2 */
+.resume-page h1 {
+  color: #17324d;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Style 3 */
+.resume-page h2 {
+  color: #315d80;
+  border-bottom: 2px solid #315d80;
+  padding-bottom: 0.3em;
+}
+
+/* Style 4 */
+.resume-page h3 {
+  color: #426b8b;
+}
+
+/* Style 5 */
+.resume-page img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+  border: 3px solid #17324d;
+}
