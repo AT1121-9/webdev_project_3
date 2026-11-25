@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const questionsButton = document.getElementById("questions-button");
 
   if (questionsButton) {
-    questionsButton.addEventListener("click", function () {
-      alert("If you have questions, contact me at:\nYOUR_EMAIL_HERE");
-    });
+    questionsButton.onclick = function () {
+      alert("If you have questions, contact me at:\naiden.tong2009@gmail.com");
+    };
   }
 });
 
