@@ -10,19 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("If you have questions, contact me at:\nYOUR_EMAIL_HERE");
     });
   }
-
-  // Load Google Maps only on the map page
-  if (document.getElementById("map")) {
-    const mapScript = document.createElement("script");
-
-    mapScript.src =
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1-F-BpX660SBK3-Vw9f7AEvTAIH8R&callback=initMap&loading=async";
-
-    mapScript.async = true;
-    mapScript.defer = true;
-
-    document.head.appendChild(mapScript);
-  }
 });
 
 // Google Maps initialization
@@ -33,25 +20,26 @@ window.initMap = function () {
     return;
   }
 
-  // Create the map
+  // Create the map centered on Illinois Institute of Technology
   const map = new google.maps.Map(mapElement, {
-    center: { lat: 41.8781, lng: -87.6298 },
-    zoom: 10,
+    center: { lat: 41.8316, lng: -87.6273 },
+    zoom: 15,
     mapTypeId: "roadmap"
   });
 
   // Add a marker
   const marker = new google.maps.Marker({
-    position: { lat: 41.8781, lng: -87.6298 },
+    position: { lat: 41.8316, lng: -87.6273 },
     map: map,
-    title: "Chicago"
+    title: "Illinois Institute of Technology"
   });
 
   // Add an information window
   const infoWindow = new google.maps.InfoWindow({
-    content: "<h2>Chicago, Illinois</h2><p>Explore the city using this interactive map.</p>"
+    content: "<h2>Illinois Institute of Technology</h2><p>Located in Chicago, Illinois.</p>"
   });
 
+  // Open the information window when the marker is clicked
   marker.addListener("click", function () {
     infoWindow.open(map, marker);
   });
@@ -81,5 +69,5 @@ window.initMap = function () {
     terrainButton.addEventListener("click", function () {
       map.setMapTypeId("terrain");
     });
-  };
+  }
 };
